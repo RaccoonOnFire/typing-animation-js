@@ -1,7 +1,6 @@
 const input = document.querySelector("input")
 const div = document.querySelector(".result")
 const animateBtn = document.querySelector(".animateBtn")
-const span = document.querySelector("span")
 const animationSpeed = 80
 let i = 0
 
@@ -9,9 +8,7 @@ const clear = () => {
   div.textContent = ""
   i = 0
 }
-const spanAnimation = () => {
-  span.classList.toggle("hidden")
-}
+
 const textAnimation = () => {
   if (input.value == "") {
     div.textContent = ""
@@ -25,7 +22,6 @@ const textAnimation = () => {
   }
 }
 
-setInterval(spanAnimation, 450)
 
 animateBtn.addEventListener("click", clear)
 animateBtn.addEventListener("click", textAnimation)

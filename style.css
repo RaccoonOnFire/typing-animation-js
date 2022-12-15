@@ -1,14 +1,12 @@
 * {
   margin: 0 auto;
 }
-
 body {
   background-color: black;
   color: white;
   font-family: monospace;
   font-size: 2rem;
 }
-
 input,
 button {
   font-size: 1.5rem;
@@ -16,30 +14,36 @@ button {
   border: 1px solid rgb(116, 116, 116);
   border-radius: 5px;
 }
-
 button {
   background-color: white;
 }
 span {
   margin-left: -5px;
 }
-
 .animation-container {
-  margin-top: 100px;
-  margin-left: 10%;
-  margin-right: 10%;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 50px;
+  margin-top: 100px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
-
 .result-container {
   display: flex;
   flex-direction: row;
   gap: 0;
 }
-
-.hidden {
-  visibility: hidden;
+.result::after{
+  content: "|";
+  opacity: 1;
+  animation: typing 0.7s infinite;
+}
+@keyframes typing {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
